@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="n1.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                SHOWMYIPADDRESS.XYZ
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="con">
+        <div class="col_1">IP ADDRESS</div>
+        <div class="col_2" id="ia"></div>
+      
+    </div>
+    <script type="application/javascript">
+        function getIP(json) {
+            var a = json.ip;
+            document.getElementById("ia").innerHTML = a;
+        }
+    </script>
+
+    <script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
+
+    <!-- Page Content -->
+    <div class="container" style="margin-top: 190px">
+        <!-- <h1 class="mt-4">Logo Nav by Start Bootstrap</h1>
+        <p>The logo in the navbar is now a default Bootstrap feature in Bootstrap 4! Make sure to set the width and
+            height of the logo within the HTML or with CSS. For best results, use an SVG image as your logo.</p> -->
+        <h2 >What is an IP address?</h2>
+        <p>IP stands for <strong>Internet Protocol</strong>.&nbsp;This protocol, like many others such as HTTP, TCP,
+            UDP, etc., is responsible for establishing communications in most of our networks.&nbsp;Even a fridge
+            can have an IP address!&nbsp;Also devices such as a router, a server, a telephone, a computer, a
+            television, etc.</p>
+        <p>There is no device in the world that can communicate with another without having an IP.&nbsp;<strong>IP
+                addresses are the numerical names</strong>&nbsp;that are assigned to a device as a “license plate”
+            so that it can be called by other devices.&nbsp;
+            <br>There are two types of IP:&nbsp;<strong>Public IP</strong>&nbsp; and&nbsp;<strong>private
+                IP</strong>.
+        </p>
+        <p>Both&nbsp;<strong>public and private IP’s</strong>&nbsp;are built in&nbsp;<strong>four number
+                blocks</strong>&nbsp;.&nbsp;Each block is a number from 0 to 255 and is separated by a period
+            (“.”).&nbsp;For example, a&nbsp;<strong>public IP address could be 63.45.12.34</strong>&nbsp;and
+            a&nbsp;<strong>private IP address, 192.168.0.11</strong>&nbsp;.
+        </p>
+
+        <h3><strong>Can there be equal public or private IP addresses?</strong></h3>
+        <p>The answer is no and yes.&nbsp;Wow, you will be stunned.&nbsp;I explain.&nbsp;<strong>A public IP can
+                never be duplicated</strong>&nbsp;, since each Internet connection is unique.&nbsp;Within a private
+            network, private&nbsp;<strong>IP’s cannot be duplicated either.&nbsp;</strong>But it is possible that,
+            for example, a friend of yours does have a private IP for one of their devices and can match a private
+            IP address you have for a device.</p>
+        <p>This is because, for example, any home has a network with private IP’s for their devices but it does not
+            mean that your friend’s home network must have different private IP addresses.&nbsp;That is, in each
+            home there is a router and this router assigns private IP addresses to each device that can match the
+            private IP addresses assigned by the router from your friend’s house to their devices.&nbsp;Are you
+            already understanding what an IP address is?</p>
+
+
+        <h2><strong>What is a public IP address?</strong></h2>
+        <p>A&nbsp;<strong>public IP is the identification assigned by your internet provider to be recognized on the
+                Internet</strong>&nbsp;.&nbsp;Just like you, you can’t go outside with the car without a license
+            plate, you can’t go online without a reference or identification.</p>
+        <p>Normally these IP addresses are usually rotated by your ISP (internet provider) every time you restart
+            the router or from time to time.&nbsp;These IP addresses are known as&nbsp;<strong>dynamic
+                IP</strong>&nbsp;addresses&nbsp;&nbsp;.&nbsp;If for some reason we need to have
+            a&nbsp;<strong>static or fixed IP</strong>&nbsp;address&nbsp;&nbsp;for a device, we must contact the ISP
+            and request that they put it manually.</p>
+        <h3><strong>What is the relationship between a public IP address and a web domain?</strong></h3>
+        <p>When the Internet was born there were very few servers and&nbsp;&nbsp;<strong>the only way to access them
+                was to know your public IP address</strong>&nbsp;.&nbsp;If a person wanted to access a particular
+            resource, it was not worth writing, for example,&nbsp;<strong>resources.com</strong>&nbsp;(mostly
+            because there were no domain names yet), but had to know the IP address of the server where that
+            resource was hosted.&nbsp;<strong>Imagine that the IP address of that server was:
+                156.87.234.176</strong>&nbsp;.</p>
+        <p>Is it not useful, efficient or easy to remember all those numbers?&nbsp;Data centers continued to grow
+            and were increasingly hosting more servers with more different information.&nbsp;It would be crazy to
+            have to point or remember each IP address for each resource!&nbsp;<strong>That is why the&nbsp;domain
+                names&nbsp;we know very well today were born</strong>&nbsp;.</p>
+        <p>Currently, we use the famous DNS (&nbsp;<strong>Domain Name Servers</strong>&nbsp;)
+            to&nbsp;<strong>impersonate an IP address with a domain name</strong>&nbsp;.&nbsp;Now, to access a
+            material of&nbsp;<strong>resources.com you</strong>&nbsp;&nbsp;no longer have to put the IP
+            156.87.234.176 but indicate&nbsp;&nbsp;<strong>resources.com</strong>&nbsp;.&nbsp;Using domain names has
+            a huge list of advantages over using IP addresses:</p>
+        <ul>
+            <li>They are easier to remember than an IP address</li>
+            <li>They are shorter</li>
+            <li>They are more attractive for uses for advertising purposes, for example</li>
+            <li>They are used to create branding / brand</li>
+            <li>They are easier to write</li>
+            <li>In the same way, several domain names can point to the same IP address</li>
+        </ul>
+
+
+        <h2><strong>What is a private IP address?</strong></h2>
+
+        <p>A private IP address is exactly the same as public IP addresses, only these&nbsp;<strong>are
+                characterized by being fixed for each device and are not accessible from the
+                Internet</strong>&nbsp;.&nbsp;The typical example is that of a house where devices such as a
+            computer for watching movies on a mobile, or using a video stream service, a television and even a
+            washing machine are
+            connected to the same WiFi network or cable.&nbsp;This network assigns a fixed and unrepeatable IP
+            address to each device so that they can recognize each other.</p>
+
+        <p>There are&nbsp;<strong>different ranges of private IP addresses</strong>&nbsp;that we will see
+            below.&nbsp;For now, I want to give you an example of what it would be like to have private IP addresses
+            in a small home environment:</p>
+        <ul>
+            <li><strong>Router</strong>&nbsp;: 192.168.0.&nbsp;<strong>1</strong></li>
+            <li><strong>Mobile 1</strong>&nbsp;: 192.168.0.&nbsp;<strong>10</strong></li>
+            <li><strong>Mobile 2</strong>&nbsp;: 192.168.0.&nbsp;<strong>11</strong></li>
+            <li><strong>Printer</strong>&nbsp;: 192.168.0.&nbsp;<strong>12</strong></li>
+            <li><strong>Tablet</strong>&nbsp;: 192.168.0.&nbsp;<strong>98</strong></li>
+        </ul>
+        <h3><strong>The ranges of private IP’s</strong></h3>
+        <p>Unlike public IP addresses, private ones are assigned a range based on the type of network that we will
+            see next.&nbsp;Public IP addresses are free, anyone can touch you:</p>
+        <ul>
+            <li><strong>Class A range</strong>&nbsp;: 10.0.0.0 to 10.255.255.255.</li>
+            <li><strong>Class B range</strong>&nbsp;: 172.16.0.0 to 172.31.255.255.</li>
+            <li><strong>Class C range</strong>&nbsp;: 192.168.0.0 to 192.168.255.255.</li>
+        </ul>
+        <hr>
+        <ul>
+            <li><strong>CLASS A</strong>&nbsp;: Used for&nbsp;<strong>gigantic networks</strong>&nbsp;, such as
+                those of international companies.&nbsp;The first block of the address is used to identify the
+                network, while the other three blocks are used to identify the devices (xxx.yyy.yyy.yyy).&nbsp;This
+                allows us to create up to 126 different networks and have a maximum of 16,777,214 computers
+                connected per network.</li>
+            <li><strong>CLASS B</strong>&nbsp;: Used by medium-sized networks, such as a&nbsp;<strong>university or
+                    institutions of similar size</strong>&nbsp;.&nbsp;It uses the first two blocks to identify the
+                network, while the remaining two are used to identify connected devices (xxx.xxx.yyy.yyy).&nbsp;This
+                allows us to create a greater number of networks, but fewer computers connected per network (16,384
+                networks and 65,534 computers).</li>
+            <li><strong>CLASS C</strong>&nbsp;: Those that 99% of the population use.&nbsp;<strong>They are reserved
+                    for small home networks</strong>&nbsp;.&nbsp;The first three blocks are used to identify the
+                network and the last one as a device identifier (xxx.xxx.xxx.yyy).&nbsp;This makes us have even more
+                different networks, but fewer computers per network (2,097,152 networks and 254 computers per
+                network).</li>
+        </ul>
+        <p>Then there are other types of ranges, but we will not see them.&nbsp;If it is already difficult to see
+            those of class A and B, the D and Y even more.&nbsp;As I said before, class C are the ones we see daily
+            and start at 192.168.XX</p>
+        <p>You have to be very clear that your private IP address is totally different from the public IP
+            address.&nbsp;The latter will only be used when you go surfing the Internet.</p>
+
+
+        <h2><strong>Netmask</strong></h2>
+        <p>The netmask allows the same IP address to be used for two devices.&nbsp;For example, you could have the
+            address 192.160.0.1 under two different masks making them serve to identify both.&nbsp;The masks are
+            also those that allow to separate the networks in the different categories that we have already
+            explained.&nbsp;The netmask is the one that dictates how many networks can be created and how many hosts
+            can exist according to the kind of private IP we have.&nbsp;Remember that we already know what the types
+            of IP classes are, we saw them above.&nbsp;As a general rule and sure that you have seen it thousands of
+            times,&nbsp;<strong>the main network mask that exists is 255.255.255.0</strong>&nbsp;, which is the one
+            assigned to&nbsp;<strong>type C networks</strong>&nbsp;.</p>
+        <ul>
+            <li>For&nbsp;<strong>class A IP addresses</strong>&nbsp;: 255.0.0.0</li>
+            <li>For&nbsp;<strong>class B IP addresses</strong>&nbsp;: 255.255.0.0</li>
+            <li>For&nbsp;<strong>class C IP addresses</strong>&nbsp;: 255.255.255.0</li>
+        </ul>
+
+        <p>Without entering into a lot of very technical data or the reason,&nbsp;<strong>blocks 255 represent the
+                amount of networks that can be</strong>&nbsp;and&nbsp;<strong>the numbers 0 how many hosts there can
+                be</strong>&nbsp;.&nbsp;It is not that there can be 255 networks and 0 hosts.&nbsp;That is the human
+            translation so that we can understand that if we translate 255.255.255.0 to binary code, it will be such
+            a code:&nbsp;<strong>111111111111111111111100000000</strong>&nbsp;.&nbsp;Would you remember that number
+            of bits of the binary code?&nbsp;<strong>Those 1 and 0 are the ones that dictate the type of network,
+                the limit of networks that may exist and the hosts that may exist</strong>&nbsp;.</p>
+        <p>For example, for not complicating the thing much: we know that the net mask 255.255.255.0, translated
+            into binary, has eight (8) zeros (0).&nbsp;Ergo if we raise two (2) to eight (8) we get 256. That 256 is
+            the number of devices that may have connected to the same network.&nbsp;Well, we should know that
+            although theoretically there are 256 opportunities, in practice we have 254 since, for example, we use
+            one for&nbsp;<strong>broadcast</strong>&nbsp;, which is
+            usually&nbsp;<strong>192.168.1.255</strong>&nbsp;.</p>
+        <p>Keep in mind that we have simplified these masks.&nbsp;There may be masks with numbers other than 0 or
+            255, such as: 255.252.0.0, 255.255.255.128, etc.</p>
+        <h2><strong>What are IPv4 and IPv6 IP addresses?</strong></h2>
+        <p>If already explaining&nbsp;<strong>what IP addresses</strong>&nbsp;are a bit messy, imagine when I
+            explain now what&nbsp;<strong>IPv6 addresses</strong>&nbsp;are&nbsp;.&nbsp;As it turns out, IPv4
+            addresses are what we have been seeing now and IPv6 addresses are a new type of protocol that comes to
+            replace IPv4 because there are almost no IPv4 addresses left and you have to jump to IPv6
+            addresses.&nbsp;We are not going to go into much matter, I just want to leave as a curious fact:</p>
+        <blockquote>
+            <p>While&nbsp;&nbsp;<b>IPv4</b>&nbsp;&nbsp;supports 4,294,967,296 (2&nbsp;<sup>32</sup>&nbsp;)
+                addresses, which is just under 4.3 billion, IPv6 offers 3.4 x
+                10&nbsp;<sup>38</sup>&nbsp;&nbsp;(2&nbsp;<sup>128</sup>&nbsp;) addresses, a number similar to
+                6.67126144781401e + 23&nbsp;&nbsp;<b>IP addresses</b> &nbsp;for each square meter on the surface of
+                the Land.</p>
+        </blockquote>
+        <p>Curious, right?&nbsp;IPv6 addresses are the future.&nbsp;Well, rather the present already.&nbsp;Its
+            composition is different from that of IPv4 addresses, since the former play
+            with&nbsp;<strong>alphanumeric characters</strong>&nbsp;.&nbsp;Therefore, the combinations are endless.
+        </p>
+        <h2><strong>How can I find out what my IP address is?</strong></h2>
+        <p>If for some reason you need to know what your public IP address is, we, who always help customers and
+            non-customers, explain it step by step. You can use one of our tools that tells you at all times what
+            your IP is. To do this, access this page.&nbsp;Upon entering, a little below, you will see your public
+            IP:</p>
+        <h2><strong>How can I know my private IP address in Windows?</strong></h2>
+        <p>On the contrary, in this case you need to know what&nbsp;<strong>your private IP address is in
+                Windows</strong>&nbsp;.&nbsp;Unlike to know the public, this process requires a somewhat more
+            complex path.&nbsp;But it is not difficult, just follow the steps you will see below.&nbsp;We will use
+            Windows 10 although in Windows the form is common in all its versions.&nbsp;On Linux or Mac, these are
+            other steps, which we will see later.</p>
+        <h3><strong>Steps to know the private IP address in Windows</strong></h3>
+        <p><strong>Indicate in the search engine</strong>&nbsp;or in
+            ‘&nbsp;<strong>Cortana</strong>&nbsp;‘:&nbsp;<strong>EXECUTE</strong>&nbsp;or&nbsp;<strong>&nbsp;press
+                the Windows symbol</strong>&nbsp;and, keeping it pressed, press
+            the&nbsp;<strong>«R»</strong>&nbsp;key&nbsp;(without the quotes).&nbsp;Click on the result
+            and&nbsp;<strong>a box will open</strong>.</p>
+        <p>Write in that box:&nbsp;<strong>CMD</strong></p>
+        <p>Press ENTER or click OK.&nbsp;A small black box will open with the cursor ready to write.</p>
+
+        <p>Type:&nbsp;<strong>ipconfig</strong>&nbsp;and press ENTER.</p>
+
+        <p>Look at the result and&nbsp;<strong>look for the line that says IPv4 address and IPv6
+                address</strong>&nbsp;.</p>
+        <p>What is marked in red are your&nbsp;&nbsp;<strong>private IPv4 and IPv6
+                addresses</strong>&nbsp;.&nbsp;You’ve got it!</p>
+        <h2><strong>How can I find out what’s my IP in Linux?</strong></h2>
+        <p>In this case we will use the Ubuntu distribution as an operating system to teach
+            you&nbsp;<strong>how</strong>&nbsp;to&nbsp;<strong>know the private IP address in Linux</strong>.
+        </p>
+        <h3><strong>Steps to know the private IP in Linux</strong></h3>
+        <p>There are several ways to access the terminal.&nbsp;One of the fastest is to press the
+            «&nbsp;<strong>Control + Alt + T»</strong>&nbsp;keys&nbsp;(without the quotes).&nbsp;You should open the
+            terminal:</p>
+
+        <p>As we did in Windows or with the movie site <a href="https://putlocker-is.org">putlocker</a> or <a
+                href="https://soap2day-to.com">soap2day</a>, the next step is to put the command that returns the
+            information we are requesting.&nbsp;If we put ”&nbsp;<strong>ipconfig</strong>&nbsp;” it will give us an
+            error, since this command is reserved for Windows.&nbsp;In this case, what we have to use is a “synonym”
+            called ”&nbsp;<strong>ifconfig</strong>&nbsp;“.&nbsp;We indicate this command in the terminal and press
+            ENTER.</p>
+
+        <p>What we see indicated are our&nbsp;<strong>private IP addresses in Linux</strong>&nbsp;.&nbsp;The first
+            red box corresponds to the&nbsp;<strong>IPv4 address</strong>&nbsp;and the second corresponds to
+            the&nbsp;<strong>IPv6 address</strong>&nbsp;.</p>
+        <p><strong>Extra</strong>&nbsp;: If putting “<strong>&nbsp;ifconfig</strong>&nbsp;” gives you an error like
+            the one you are going to see next, it is because “<strong>&nbsp;ifconfig</strong>&nbsp;” is an obsolete
+            command.&nbsp;You must do what the command tells you to solve this problem or execute “<strong>&nbsp;ip
+                addr list</strong>&nbsp;” even if the result changes slightly with those expected when executing
+            “<strong>&nbsp;ifconfig</strong>&nbsp;“.</p>
+
+        <h2><strong>How can I find out what my IP address is on a Mac?</strong></h2>
+        <p>Finally, we want to show you&nbsp;<strong>how</strong>&nbsp;to&nbsp;<strong>find out what’s your IP on a
+                Mac</strong>.</p>
+        <h3><strong>Steps to know the IP on a Apple Mac</strong></h3>
+        <p>As we did in Linux to search for the terminal with a special key command, we have several ways to run the
+            terminal on Mac. For ease, I recommend&nbsp;<strong>using the search icon on the top</strong> right of
+            the operating system, called “S<strong>potlight</strong>“.</p>
+
+        <p>Once the search box is opened, type ”&nbsp;<strong>Terminal</strong>&nbsp;” and press the ENTER key.</p>
+
+        <p>In the terminal, type the command ”&nbsp;<strong>ifconfig</strong>&nbsp;” as in the case of
+            Linux.&nbsp;Click ENTER and look at the result.&nbsp;Here you can see the&nbsp;<strong>private IPv6 IP
+                address on Mac</strong>&nbsp;.</p>
+
+        <p>If you want to see the private IPv4 IP address on Mac, what you have to do is go to the
+            ”&nbsp;<strong>dock</strong>&nbsp;” (bottom bar) and look for the ”&nbsp;<strong>system
+                preferences</strong>&nbsp;” icon&nbsp;.</p>
+
+        <p>Next, you will see a system preferences box where you must go to the
+            «&nbsp;<strong>Network</strong>&nbsp;»&nbsp;icon&nbsp;and click there:</p>
+        <p>Another window will appear in which you will have to click on ”&nbsp;<strong>advanced
+                options</strong>&nbsp;” in the lower right button (although in some versions of Mac they already
+            tell you the IPv4 address right here).</p>
+        <p>Again another window is superimposed with different tabs such as ”&nbsp;<strong>Wi-Fi</strong>&nbsp;“,
+            ”&nbsp;<strong>TCP / IP</strong>&nbsp;“, ”&nbsp;<strong>DNS</strong>&nbsp;“,
+            ”&nbsp;<strong>WINS</strong>&nbsp;“, etc.&nbsp;You have to go to ”&nbsp;<strong>TCP / IP</strong>&nbsp;”
+            and by clicking there you will see the&nbsp;<strong>IPv4 IP of Mac</strong>&nbsp;.</p>
+
+        <blockquote style="margin-bottom: 200px;">
+            <p>And we have finished the way to find out the&nbsp;<strong>private IP address v4 and v6 on
+                    Windows</strong>&nbsp;,&nbsp;<strong>Linux</strong>&nbsp;and&nbsp;<strong>Mac</strong>&nbsp;.
+            </p>
+        </blockquote>
+    </div>
+    <!-- /.container -->
+
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-6">
+                    <h6>About</h6>
+                    <p class="text-justify">Showmyipaddress.xyz is an IP lookup tool which helps you find your public IP
+                        address on the internet and making internet an safe place.</p>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>ADDRESS </h6>
+                    <ul class="footer-links"><p>
+                        239-A, Street-3, NEWYORK, USA .
+                    </p>
+                        <!-- <li><a href="">C</a></li>
+                        <li><a href="">UI Design</a></li>
+                        <li><a href="">PHP</a></li>
+                        <li><a href="">Java</a></li>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">Templates</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="col-xs-6 col-md-3">
+                    <h6>Quick Links</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Contribute</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <!-- <li><a href="#">Lasr </a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                    <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
+                        <a href="#">ShowMyIPAddress.XYZ </a>
+                    </p>
+                </div>
+
+                <!-- <div class="col-md-4 col-sm-6 col-xs-12">
+          <ul class="social-icons">
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          </ul>
+        </div> -->
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
